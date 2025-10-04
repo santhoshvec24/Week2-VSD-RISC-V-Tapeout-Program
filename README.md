@@ -29,8 +29,8 @@ This report presents the fundamental principles of **SoC design** while offering
 
 ## Part-wise Folders  
 
-- [Part 1](https://github.com/MOHANAPRIYANP16/Week-2-VSD-RISC-V-Tapeout-Program-/blob/main/Part1/README_PART1.md) – Fundamentals of BabySoC.  
-- [Part 2](https://github.com/MOHANAPRIYANP16/Week-2-VSD-RISC-V-Tapeout-Program-/blob/main/Part2/READMEPart2.md) – Practical functional modelling and simulation flow.  
+- [Part 1](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part1) – Fundamentals of BabySoC.  
+- [Part 2](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2) – Practical functional modelling and simulation flow.  
 
 ---
 
