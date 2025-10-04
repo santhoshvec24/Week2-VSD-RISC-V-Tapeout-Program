@@ -168,7 +168,7 @@ A simple bus connects CPU ↔ Memory ↔ Peripherals.
 - Shows how control signals manage data flow.
 - Helps learners write test benches and simulate hardware behavior.
 - Prepares students for more complex RTL design and physical implementation steps.
-![soc-diagram](https://github.com/user-attachments/assets/deb617ab-e5ef-409d-8c97-430c70f451a6)
+<img width="624" height="349" alt="BabySoC_block" src="https://github.com/user-attachments/assets/138712b5-5419-463c-986a-62cd84177962" />
 
 ---
 ## 5. The Role of Functional Modelling Before RTL and Physical Design Stages
@@ -270,7 +270,7 @@ Importance of abstraction – starting simple, moving towards RTL and physical d
 
 ---
 ## 11. SoC Design Flow:
-![soc-diagram](https://github.com/user-attachments/assets/a5e43b9a-aa6a-4fde-b687-00e3e9d39ba5)
+<img width="685" height="1064" alt="SoC_design_flow" src="https://github.com/user-attachments/assets/ad93b2e7-13da-4afd-8ea0-08980faae706" />
 
 ---
 
