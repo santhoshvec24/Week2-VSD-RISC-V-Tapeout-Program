@@ -44,10 +44,10 @@ Special thanks to the SKY130 PDK community, the VSDBabySoC contributors, and the
 ## Contributor 
 
 **SANTHOSH V**  
-[LinkedIn](https://www.linkedin.com/in/mohanapriyan-p-b94962325/)  
+[LinkedIn]([https://www.linkedin.com/in/santhosh-v-31142232b/])  
 
 ---
 
-📌 Previous Week – *Week 1 (Simulation, Synthesis & Optimisation)* → [Week 1 Repository](https://github.com/MOHANAPRIYANP16/Week-1-VSD-RISC-V-Tapeout-Program-)  
+Previous Week – *Week 1 (Simulation, Synthesis & Optimisation)* → [Week 1 Repository](https://github.com/MOHANAPRIYANP16/Week-1-VSD-RISC-V-Tapeout-Program-)  
 
 ---
