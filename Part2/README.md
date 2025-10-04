@@ -1,5 +1,8 @@
+# BabySoC: Hands-on Functional Modelling
+The VSDBabySoC is a simplified educational SoC design that integrates a RISC-V core (rvmyth), a PLL (Phase-Locked Loop), and a DAC (Digital-to-Analog Converter).
+It demonstrates functional modeling, pre- and post-synthesis simulation, and waveform analysis using Icarus Verilog and GTKWave.
 
-
+---
 
 
 ## Cloning the VSDBabySoC Repository:
