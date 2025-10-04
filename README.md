@@ -43,7 +43,7 @@ Special thanks to the SKY130 PDK community, the VSDBabySoC contributors, and the
 
 ## Contributor 
 
-[SANTHOSH V]([https://www.linkedin.com/in/santhosh-v-31142232b/])
+[SANTHOSH V](#https://www.linkedin.com/in/santhosh-v-31142232b/)
 
 ---
 
