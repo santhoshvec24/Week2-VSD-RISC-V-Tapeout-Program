@@ -318,8 +318,60 @@ stat
 Statistics:
 
 <pre>
+   === vsdbabysoc ===
 
-
+   Number of wires:               3881
+   Number of wire bits:           6279
+   Number of public wires:        3881
+   Number of public wire bits:    6279
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5933
+     avsddac                         1
+     avsdpll                         1
+     sky130_fd_sc_hd__a2111oi_0      9
+     sky130_fd_sc_hd__a211oi_1       9
+     sky130_fd_sc_hd__a21boi_0       6
+     sky130_fd_sc_hd__a21o_2         4
+     sky130_fd_sc_hd__a21oi_1      563
+     sky130_fd_sc_hd__a221oi_1     149
+     sky130_fd_sc_hd__a22o_2         3
+     sky130_fd_sc_hd__a22oi_1      162
+     sky130_fd_sc_hd__a2bb2oi_1      3
+     sky130_fd_sc_hd__a311oi_1       3
+     sky130_fd_sc_hd__a31o_2         4
+     sky130_fd_sc_hd__a31oi_1      265
+     sky130_fd_sc_hd__a32o_1        20
+     sky130_fd_sc_hd__a41oi_1       10
+     sky130_fd_sc_hd__and2_2        14
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__clkinv_1     464
+     sky130_fd_sc_hd__dfxtp_1     1144
+     sky130_fd_sc_hd__mux2i_1       13
+     sky130_fd_sc_hd__nand2_1      925
+     sky130_fd_sc_hd__nand3_1      121
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nand4_1       51
+     sky130_fd_sc_hd__nor2_1       699
+     sky130_fd_sc_hd__nor3_1        33
+     sky130_fd_sc_hd__nor4_1         4
+     sky130_fd_sc_hd__o2111ai_1     25
+     sky130_fd_sc_hd__o211a_1        2
+     sky130_fd_sc_hd__o211ai_1      20
+     sky130_fd_sc_hd__o21a_1        13
+     sky130_fd_sc_hd__o21ai_0      985
+     sky130_fd_sc_hd__o21bai_1      13
+     sky130_fd_sc_hd__o221ai_1       8
+     sky130_fd_sc_hd__o22ai_1      103
+     sky130_fd_sc_hd__o2bb2ai_1      2
+     sky130_fd_sc_hd__o311ai_0       4
+     sky130_fd_sc_hd__o31ai_1        1
+     sky130_fd_sc_hd__o41ai_1        3
+     sky130_fd_sc_hd__or2_2         17
+     sky130_fd_sc_hd__or3_2          1
+     sky130_fd_sc_hd__xnor2_1       13
+     sky130_fd_sc_hd__xor2_1        41
 </pre>
 
 Then finally write the netlist using the command, 
@@ -327,3 +379,37 @@ Then finally write the netlist using the command,
 write_verilog -noattr ~/vcd/photos/vsdbabysoc_synth.v
 ```
 
+<img width="724" height="199" alt="image" src="https://github.com/user-attachments/assets/6569db4a-f896-4c20-b24c-cf1fb55e2ff5" />
+
+Simulation :
+
+Ensure the following files are in the working directory (`photos` in my case) before compilation by running,
+```bash
+cp -r ~/vcd/photos/VSDBabySoC/src/module/avsddac.v .
+cp -r ~/vcd/photos/VSDBabySoC/src/module/avsdpll.v .
+cp -r ~/vcd/photos/VSDBabySoC/src/gls_model/sky130_fd_sc_hd.v .
+cp -r ~/vcd/photos/VSDBabySoC/src/gls_model/primitives.v .
+```
+to check the below given files
+```
+vsdbabysoc_synth.v
+avsddac.v
+avsdpll.v
+primitives.v
+sky130_fd_sc_hd.v
+```
+
+Compilation of the netlist with the testbench must be done, of course through `iverilog` using the following command,
+```bash
+iverilog -o ~/vcd/photos/vsdbabysoc_synth.vvp -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I ~/vcd/photos/VSDBabySoC/src/include -I ~/vcd/photos/VSDBabySoC/src/module -I  ~/vcd/photos/VSDBabySoC/src/gls_model ~/vcd/photos/VSDBabySoC/src/module/testbench.v
+```
+
+- `-DPOST_SYNTH_SIM`: Defines the macro POST_SYNTH_SIM to enable post-synthesis simulation mode.
+- `-DFUNCTIONAL`: Defines the macro FUNCTIONAL to select functional simulation mode. \
+- `-DUNIT_DELAY=#1`: Defines the macro UNIT_DELAY with value #1 for unit delay parameterization in simulation.
+
+Then, to view the waveform,
+```bash
+vvp vsdbabysoc_synth.vvp
+gtkwave post_synth_sim.vcd
+```
