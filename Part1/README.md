@@ -3,20 +3,27 @@
 ## Table of Contents
 
 1.[Introduction](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#introduction)
+
 2. [What is a System-on-Chip (SoC)?](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#1-what-is-a-system-on-chip-soc)
+
 3. [Components of a Typical SoC](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#2-components-of-a-typical-soc)
   -  3.1 CPU (Central Processing Unit)
   - 3.2 Memory
   -  3.3 Peripherals
   - 3.4 Interconnect Fabric
+   
 4. [Evolution of Integrated Circuits → From SSI to SoC](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#3-evolution-of-integrated-circuits--from-ssi-to-soc)
+ 
 5. [Key Components of a Typical SoC](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#4-key-components-of-a-typical-soc)
   - 5.1 CPU (Processor Core)
   - 5.2 Memory Hierarchy
   - 5.3 Peripherals
   - 5.4 Interconnect (Bus & NoC)
+   
 6. [The Role of Functional Modelling Before RTL and Physical Design](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#5-the-role-of-functional-modelling-before-rtl-and-physical-design-stages)
+ 
 7. [Characteristics of SoCs](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#6-characteristics-of-socs)
+ 
 8. [Challenges in SoC Design](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#7challenges-in-soc-design)
 9. [BabySoC – A Simplified Learning Model](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#8babysoc--a-simplified-learning-model)
 10. [Role of Functional Modelling](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/edit/main/Part1/README.md#9-role-of-functional-modelling)
