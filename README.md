@@ -8,8 +8,8 @@ This report presents the fundamental principles of **SoC design** while offering
 
 ## 📑 Table of Contents
   
-1. [Learning Goals](#-learning-goals)  
-2. [Objective](#-Part-wise-folders)  
+1. [Objective](#objective)  
+2. [Part-wise Folders](#part-wise-folders)  
    - [Part 1](https://github.com/MOHANAPRIYANP16/Week-2-VSD-RISC-V-Tapeout-Program-/tree/main/Part1)  
    - [Part 2](https://github.com/MOHANAPRIYANP16/Week-2-VSD-RISC-V-Tapeout-Program-/tree/main/Part2)  
 3. [Credits](#-credits)  
