@@ -6,7 +6,7 @@ It demonstrates functional modeling, pre- and post-synthesis simulation, and wav
 ### Table of Contents:
 1. [Cloning the VSDBabySoC Repository](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#cloning-the-vsdbabysoc-repository)
 2. [Analyse the contents of VSDBabySoC](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#analyse-the-contents-of-vsdbabysoc)
-3. [TLV to Verilog Conversion for RVMYTH]([https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#analyse-the-contents-of-vsdbabysoc](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#tlv-to-verilog-conversion-for-rvmyth))
+3. [TLV to Verilog Conversion for RVMYTH](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#analyse-the-contents-of-vsdbabysoc](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#tlv-to-verilog-conversion-for-rvmyth)
 4. [Simulation Steps](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#simulation-steps)
 5. [Pre-Synthesis Simulation](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#pre-synthesis-simulation)
 6. [Verilog Source Files(*.v)](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#verilog-source-files-v)
