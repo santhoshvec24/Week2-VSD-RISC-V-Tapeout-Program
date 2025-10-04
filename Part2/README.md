@@ -246,3 +246,84 @@ vvp avsddac.vvp
 gtkwave avsddac_tb_test.vcd
 ```
 <img width="998" height="704" alt="Screenshot from 2025-10-04 18-25-40" src="https://github.com/user-attachments/assets/0b47fb59-bff1-429f-94d2-873b74a923d4" />
+
+---
+
+## Post-synthesis Simulation of VSDBabySoc
+
+### Synthesis :
+
+Synthesis requires the header files essential for the rvmyth module,
+these are
+- sp_verilog.vh – includes core Verilog macros and parameter definitions
+- sandpiper.vh – defines integration-specific settings used by SandPiper
+- sandpiper_gen.vh – contains tool-generated parameters and configuration values
+
+These files need to be present in the working directory of yosys in order to ensure error free synthesis. This is done using the following commands,
+
+cd ~/Documents/Verilog/Labs/VSDBabySoC
+cp -r src/include/sp_verilog.vh .
+cp -r src/include/sandpiper.vh .
+cp -r src/include/sandpiper_gen.vh .
+
+Now inside the `../VSDBabySoC` folder, run yosys,
+```bash
+yosys
+```
+In yosys, run 
+```bash
+read_verilog src/module/vsdbabysoc.v 
+read_verilog -I ~/vcd/photos/VSDBabySoC/src/include/ ~/vcd/photos/VSDBabySoC/src/module/rvmyth.v
+read_verilog -I ~/vcd/photos/VSDBabySoC/src/include/ ~/vcd/photos/VSDBabySoC/src/module/clk_gate.v
+```
+This is performed to read the verilog files.
+then, the library files
+```bash
+read_liberty -lib ~/vcd/photos/VSDBabySoC/src/lib/avsdpll.lib 
+read_liberty -lib ~/vcd/photos/VSDBabySoC/src/lib/avsddac.lib 
+read_liberty -lib ~/vcd/photos/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+Synthesize `vsdbabysoc`, specifying it as the top module,
+```bash
+synth -top vsdbabysoc
+```
+
+Convert D Flip-Flops into equivalent Standard Cell instances by,
+```bash
+dfflibmap -liberty ~/vcd/photos/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+Perform Optimization and Technology mapping using the following commands,
+```bash
+opt
+abc -liberty ~/vcd/photos/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+```
+Then, conduct final optimisations and clean-up through,
+```bash
+flatten
+setundef -zero
+clean -purge
+rename -enumerate
+```
+
+- `flatten`: Remove hierarchy, make a flat netlist
+- `setundef -zero`: Replace undefined signals with 0
+- `clean -purge`: Delete unused/duplicate logic
+- `rename -enumerate`: Systematically rename nets and cells
+
+To check the statistics of the synthesised design run,
+```bash
+stat
+```
+Statistics:
+
+<pre>
+
+
+</pre>
+
+Then finally write the netlist using the command, 
+```bash
+write_verilog -noattr ~/vcd/photos/vsdbabysoc_synth.v
+```
+
