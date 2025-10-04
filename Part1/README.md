@@ -159,6 +159,8 @@ Scalable interconnect for many cores.
 `In BabySoC`:
 
 A simple bus connects CPU ↔ Memory ↔ Peripherals.
+![soc-diagram](https://github.com/user-attachments/assets/c3c6fbcb-0403-4800-9db5-f57f1dcc2201)
+
 
 **Why BabySoC helps learning:**
 
@@ -166,6 +168,7 @@ A simple bus connects CPU ↔ Memory ↔ Peripherals.
 - Shows how control signals manage data flow.
 - Helps learners write test benches and simulate hardware behavior.
 - Prepares students for more complex RTL design and physical implementation steps.
+![soc-diagram](https://github.com/user-attachments/assets/deb617ab-e5ef-409d-8c97-430c70f451a6)
 
 ---
 ## 5. The Role of Functional Modelling Before RTL and Physical Design Stages
@@ -266,12 +269,24 @@ By completing this task, I learned:
 Importance of abstraction – starting simple, moving towards RTL and physical design.
 
 ---
+## 11. SoC Design Flow:
+![soc-diagram](https://github.com/user-attachments/assets/a5e43b9a-aa6a-4fde-b687-00e3e9d39ba5)
+
+---
 
 ## Summary
 
-- SoC technology integrates multiple system components into one chip for efficient, compact computing.
-- SoCs have CPU cores, memory hierarchies, diverse peripherals, and sophisticated interconnect fabrics.
-- BabySoC offers a minimal, clear model that helps beginners grasp the complex concepts of SoC design.
-- Functional modelling is an essential early design step, enabling verification and design iteration before detailed hardware implementation.
+This document introduces the fundamentals of System-on-Chip (SoC) design and explains how VSDBabySoC serves as a simplified, educational model.
+
+Key points covered:
+
+   - SoC Overview: Integrates CPU, memory, interconnect, and peripherals into a single chip, enabling compact, efficient, and high-performance systems.
+   - Components: CPUs (microcontroller or application-class), memory hierarchy (RAM, ROM, cache), various peripherals (GPIO, timers, ADC/DAC), and interconnects (bus, crossbar, NoC).
+   - Types of SoCs: Microprocessor-based, microcontroller-based, and application-specific.
+   - Design Flow: From specification → functional modeling → RTL design → verification → synthesis & physical design → tape-out.
+   - VSDBabySoC: A minimal SoC featuring the RVMYTH CPU, simple bus, memory, peripherals, PLL, and DAC; designed for learning and experimentation.
+   - Functional Modeling: Provides a high-level behavioral model to validate architecture before RTL and physical design, bridging theory and practical SoC design.
+
+Overall, BabySoC allows learners to understand CPU-memory-peripheral interactions, bus communication, and analog interfacing, providing a safe, manageable platform to explore SoC concepts before moving to more complex designs.
 
 ---
