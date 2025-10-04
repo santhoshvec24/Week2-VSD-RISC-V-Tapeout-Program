@@ -12,8 +12,8 @@ This report presents the fundamental principles of **SoC design** while offering
 2. [Part-wise Folders](#part-wise-folders)  
    - [Part 1](https://github.com/MOHANAPRIYANP16/Week-2-VSD-RISC-V-Tapeout-Program-/tree/main/Part1)  
    - [Part 2](https://github.com/MOHANAPRIYANP16/Week-2-VSD-RISC-V-Tapeout-Program-/tree/main/Part2)  
-3. [Credits](#-credits)  
-4. [Contributor](#-contributor)  
+3. [Credits](#credits)  
+4. [Contributor](#contributor)  
 
 ---
 
