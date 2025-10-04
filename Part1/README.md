@@ -1,10 +1,26 @@
 # BabySoC Functional Modelling
 
 
+## Introduction
+The modern digital world is built upon System-on-Chip (SoC) technology. Every smartphone, smart TV, IoT device, and even advanced computing systems rely on SoCs to deliver high performance with minimal power and area.
+
+In this task, we explore the fundamentals of SoC design and practice functional modelling through a simple educational model called BabySoC.
+
+This document provides both conceptual understanding and simulation-oriented insights to help establish a strong foundation for future RTL and physical design learning.
+
+---
 
 ## 1. What is a System-on-Chip (SoC)?
 
 A System-on-Chip (SoC) is a complex integrated circuit that incorporates all the components of a computer system or other electronic systems onto a single silicon die. This integration is a significant evolution from traditional multi-chip systems, which rely on discrete components connected through printed circuit boards (PCBs).
+A System-on-Chip (SoC) is a type of integrated circuit (IC) that integrates all components of a computer system into a single chip.  
+Instead of having a separate CPU chip, memory chip, and peripheral controllers, an SoC combines them all into one highly integrated silicon die.
+
+
+SoC = CPU + Memory + Peripherals + Interconnect (all in one IC).
+Reduces power consumption, size, and cost.
+Increases performance and efficiency.
+Common in consumer electronics (smartphones, tablets, IoT devices).
 
 *SoCs typically include*:
 
@@ -72,17 +88,71 @@ Advanced SoCs use Network-on-Chip (NoC), which treats internal data transfers as
 The interconnect manages arbitration, data routing, and synchronization.
 
 ---
-## 3. Why BabySoC is a Simplified Model for Learning SoC Concepts
 
-Real SoCs are extremely complex, with millions of gates, multiple clock domains, power domains, and heterogeneous processing units. This complexity is often overwhelming for beginners.
-BabySoC is a minimalistic SoC design that distills the essential features into a manageable size, enabling learners to understand core concepts without getting lost in details.
-#### Features of BabySoC:
+## 3. Evolution of Integrated Circuits → From SSI to SoC
 
-- A simple *CPU core* that supports a limited instruction set, illustrating the fetch-decode-execute cycle.
-- A small *memory module* that can be used for instruction and data storage.
-- A handful of *peripherals* (e.g., timers, GPIO) to demonstrate I/O interactions.
-- A *basic bus interconnect* that connects these modules.
-It is designed to be easily simulated using tools like Icarus Verilog and GTKWave, so students can see waveforms and understand timing behavior.
+The history of chip design can be divided into stages:
+**SSI (Small Scale Integration)** – A few gates per chip (1960s).
+**MSI (Medium Scale Integration)** – Hundreds of gates per chip (1970s).
+**LSI (Large Scale Integration)** – Thousands of gates (1980s).
+**VLSI (Very Large Scale Integration)** – Millions of gates (1990s).
+**ULSI (Ultra Large Scale Integration)** – Hundreds of millions of transistors (2000s).
+**SoC (System-on-Chip)** – Complete systems on a single chip (2000s onwards).
+This journey represents the shrinking of transistors and integration of functionalities into fewer chips, culminating in SoC technology.
+
+---
+## 4. Key Components of a Typical SoC
+
+An SoC integrates multiple subsystems. Let’s explore each:
+
+### 4.1 CPU (Processor Core)
+
+The CPU (Central Processing Unit) is the brain of the SoC.
+It executes instructions, processes data, and controls the flow of operations.
+
+#### Types:
+
+General Purpose Processor (GPP) – RISC-V, ARM, x86.
+Application-Specific Processors – DSP (Digital Signal Processor).
+Example in BabySoC: A simple RISC-V core is used.
+
+### 4.2 Memory Hierarchy
+
+Memory is crucial for storing instructions and data.
+Types of memory in SoC:
+**ROM** – Stores firmware.
+**SRAM** – On-chip cache.
+**DRAM** – Main system memory.
+**Flash** – Non-volatile storage.
+`In BabySoC:`
+A simple block RAM is enough.
+
+### 4.3 Peripherals
+
+Peripherals are interfaces that allow the CPU to interact with the outside world.
+
+#### Examples:
+
+- UART (serial communication).
+- SPI/I2C (sensor interface).
+- GPIO (general-purpose I/O pins).
+- Timers and Counters.
+`In BabySoC:`
+
+Only basic GPIOs or UARTs are included.
+
+### 4.4 Interconnect (Bus & NoC)
+
+The interconnect is the communication backbone of an SoC.
+Bus-based interconnects:
+
+AHB, APB, AXI (used in ARM-based SoCs).
+`Network-on-Chip (NoC)`:
+Scalable interconnect for many cores.
+
+`In BabySoC`:
+
+A simple bus connects CPU ↔ Memory ↔ Peripherals.
 
 **Why BabySoC helps learning:**
 
@@ -91,7 +161,8 @@ It is designed to be easily simulated using tools like Icarus Verilog and GTKWav
 - Helps learners write test benches and simulate hardware behavior.
 - Prepares students for more complex RTL design and physical implementation steps.
 
-## 4. The Role of Functional Modelling Before RTL and Physical Design Stages
+---
+## 5. The Role of Functional Modelling Before RTL and Physical Design Stages
 
 Functional Modelling is the abstraction layer where designers specify the behavior of the system in terms of functionality, rather than implementation details.
 
@@ -120,6 +191,76 @@ Functional Modelling is the abstraction layer where designers specify the behavi
 - Saves time by avoiding design errors that might only be found post-silicon.
 
 ---
+## 6. Characteristics of SoCs
+
+Some defining characteristics of SoCs:
+
+**High Integration** – Multiple functions on one chip.
+**Low Power Consumption*** – Optimized for battery-powered devices.
+**Small Size** – Suitable for portable electronics.
+**Customizability** – Can be designed for specific applications.
+**High Performance** – Fast interconnects and efficient memory.
+
+---
+## 7.Challenges in SoC Design
+
+Designing an SoC is not easy:
+
+**Complex Verification** – Millions of transistors.
+**Integration of IP blocks** – CPU + GPU + memory + custom blocks.
+**Power Management** – Must balance speed and battery life.
+**Physical Design** – Placement, routing, timing closure.
+**Cost & Time-to-Market** – Very competitive industry.
+
+This is why BabySoC is important.
+
+---
+## 8.BabySoC – A Simplified Learning Model
+
+BabySoC is a miniature version of a real SoC.
+**Consists of:**
+
+Minimal CPU core (RISC-V).
+Small memory.
+Basic interconnect.
+Simple peripherals.
+**Why BabySoC?**
+
+Easy to simulate.
+Great for beginners.
+
+Teaches real SoC principles without industry-scale complexity.
+
+---
+## 9. Role of Functional Modelling
+
+Before going to RTL coding or physical design, we start with functional modelling.
+**Functional Modelling = "Early Prototype"**
+- Describes the system behavior without worrying about hardware details.
+- Allows simulation using tools like Icarus Verilog.
+- Helps debug system-level flow (CPU ↔ Memory ↔ Peripherals).
+- Provides validation before RTL design.
+Example flow:
+
+1. Write Verilog models for CPU, memory, bus, peripheral.
+2. Simulate with Icarus Verilog.
+3. View waveforms in GTKWave.
+4. Check if BabySoC behaves correctly.
+
+---
+## 10. Learning Outcomes from Week 2 Task
+
+By completing this task, I learned:
+
+**SoC fundamentals** – components, structure, design challenges.
+**BabySoC principles** – why simplified models are essential.
+**Functional modelling** – how to validate SoC design early.
+**Open-source tools** – Icarus Verilog & GTKWave usage.
+
+Importance of abstraction – starting simple, moving towards RTL and physical design.
+
+---
+
 ## Summary
 
 - SoC technology integrates multiple system components into one chip for efficient, compact computing.
