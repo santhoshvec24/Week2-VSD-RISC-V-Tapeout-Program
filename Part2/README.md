@@ -3,6 +3,17 @@ The VSDBabySoC is a simplified educational SoC design that integrates a RISC-V c
 It demonstrates functional modeling, pre- and post-synthesis simulation, and waveform analysis using Icarus Verilog and GTKWave.
 
 ---
+### Table of Contents:
+1. [Cloning the VSDBabySoC Repository](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#cloning-the-vsdbabysoc-repository)
+2. [Analyse the contents of VSDBabySoC](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#analyse-the-contents-of-vsdbabysoc)
+3. [TLV to Verilog Conversion for RVMYTH]([https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#analyse-the-contents-of-vsdbabysoc](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#tlv-to-verilog-conversion-for-rvmyth))
+4. [Simulation Steps](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#simulation-steps)
+5. [Pre-Synthesis Simulation](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#pre-synthesis-simulation)
+6. [Verilog Source Files(*.v)](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#verilog-source-files-v)
+7. [RTL Simulation of Modules](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#rtl-simulation-of-modules)
+8. [Post-Synthesis Simulation of VSDBabySoC](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#post-synthesis-simulation-of-vsdbabysoc)
+9. [Pre-Synthesis vs Post-Synthesis Simulation](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#pre-synthesis-vs-post-synthesis-simulation)
+10. [Summary](https://github.com/santhoshvec24/Week2-VSD-RISC-V-Tapeout-Program/tree/main/Part2#summary)
 
 
 ## Cloning the VSDBabySoC Repository:
