@@ -53,6 +53,7 @@ The CPU core consists of several key units:
 
 CPU cores follow instruction set architectures (ISAs) such as ARM, RISC-V, or x86.
 
+---
 ### 2.2 Memory:
 
 Memory hierarchy is critical for system performance.
@@ -66,6 +67,7 @@ Memory hierarchy is critical for system performance.
 
 Memory controllers manage data transfers between CPU and memory modules.
 
+---
 ### 2.3 Peripherals:
 
 Peripherals provide interfaces for external and internal communication.
@@ -80,6 +82,7 @@ Peripherals provide interfaces for external and internal communication.
 
 Peripherals operate at different speeds and sometimes run independently (via DMA controllers).
 
+---
 ### 2.4 Interconnect Fabric:
 
 The interconnect is the backbone linking all components.
@@ -116,6 +119,7 @@ General Purpose Processor (GPP) – RISC-V, ARM, x86.
 Application-Specific Processors – DSP (Digital Signal Processor).
 Example in BabySoC: A simple RISC-V core is used.
 
+---
 ### 4.2 Memory Hierarchy
 
 Memory is crucial for storing instructions and data.
@@ -127,6 +131,7 @@ Types of memory in SoC:
 `In BabySoC:`
 A simple block RAM is enough.
 
+---
 ### 4.3 Peripherals
 
 Peripherals are interfaces that allow the CPU to interact with the outside world.
@@ -141,6 +146,7 @@ Peripherals are interfaces that allow the CPU to interact with the outside world
 
 Only basic GPIOs or UARTs are included.
 
+---
 ### 4.4 Interconnect (Bus & NoC)
 
 The interconnect is the communication backbone of an SoC.
