@@ -413,3 +413,19 @@ Then, to view the waveform,
 vvp vsdbabysoc_synth.vvp
 gtkwave post_synth_sim.vcd
 ```
+
+<img width="1275" height="703" alt="image" src="https://github.com/user-attachments/assets/aa43ab09-9e6e-4eed-a7a2-d4306a75b40c" />
+
+---
+
+## Pre-Synthesis vs Post-Synthesis Simulation
+<img width="1920" height="922" alt="image" src="https://github.com/user-attachments/assets/9d7efbb0-a485-49bc-b10e-8c5e4d5d4710" />
+
+We see that there are no mismatches in functionality and the VSDBabySoC design works in its intended way after synthesis.
+
+---
+## Summary:
+
+VSDBabySoC is a small but powerful system-on-chip that’s built to help you understand the core ideas behind SoCs and how they work in practice. It brings together a CPU, clock management through a PLL, and a DAC to show how data moves from processing all the way to output. The design highlights how different modules fit together, how signals behave, and the importance of timing. You can simulate and verify how it all works using tools like Icarus Verilog and analyze waveforms with GTKWave. By running both pre- and post-synthesis simulations, it clearly demonstrates how functional modeling bridges the gap between theory and real-world SoC design.
+
+---
